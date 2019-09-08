@@ -1,10 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>My Page Title</title>
-  <link rel="stylesheet" href="/css/site.css">
-</head>
-<body>
-<p>Your content goes here.</p>
-</body>
-</html>
+    <head>
+        <title>Home</title>
+            <!--Compiled and minified CSS-->
+
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js.map"></script>
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+            <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <header>
+    <h1>
+      <center><img src="" height=50px><strong>Vishwesh Hande</strong></center>
+    </h1>
+  </header>
+
+    <body style="background-color:lightgrey">
+
+
+
+    <nav class="navbar navbar-inverse">
+
+            <ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about-me.html">About Me</a></li>
+				<li><a href="books.html">Recently Read</a></li>
+            </ul>
+    </nav>
+
+
+      <h2><center><strong>Welcome to the Jungle!</strong></h2></center>
+
+      <h3><center><strong>Artists I Love</strong></h3></center>
+
+
+
+    <div class="container-fluid text-center bg-1">
+      <br>
+      <a href="img/john.jpg" data-toggle="lightbox" data-title="John Mayer" data-footer="https://www.rollingstone.com/music/music-news/john-mayer-reveals-personal-stories-behind-four-wave-2-songs-118825/">
+      <img id="image" src="img/john.jpg" alt="https://www.rollingstone.com/music/music-news/john-mayer-reveals-personal-stories-behind-four-wave-2-songs-118825/" class="img-circle" height=180px width=200px>
+</a>
+      <h3>John Mayer</h3>
+    </div>
+
+
+    <div class="container-fluid text-center bg-2">
+      <br>
+        <a href="img/dire.jpg" data-toggle="lightbox" data-title="Dire Straits" data-footer="https://en.wikipedia.org/wiki/Dire_Straits">
+      <img id="image" src="img/dire.jpg" alt="https://en.wikipedia.org/wiki/Dire_Straits" class="img-circle" height=200px>
+</a>
+      <h3>Dire Straits</h3>
+    </div>
+
+
+    <div class="container-fluid text-center bg-3">
+      <br>
+        <a href="img/simon.jpg" data-toggle="lightbox" data-title="Simon & Garfunkel" data-footer="https://www.npr.org/sections/allsongs/2012/05/14/152036574/youve-never-heard-simon-and-garfunkels-bookends">
+      <img id="image" src="img/simon.jpg" alt="https://www.npr.org/sections/allsongs/2012/05/14/152036574/youve-never-heard-simon-and-garfunkels-bookends" class="img-circle" height=200px>
+</a>
+      <h3>Simon and Garfunkel</h3>
+    </div>
+    <script>
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                    event.preventDefault();
+                    $(this).ekkoLightbox();
+                });
+                </script>
+  </h1></body>
+      <hr  id="horizontal">
+      <footer>
+      <center>
+      VH | Phone: 812-368-994 | Kelley School of Business</center>
+      </footer>
+      </html>
