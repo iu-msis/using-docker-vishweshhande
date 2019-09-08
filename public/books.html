@@ -34,7 +34,7 @@
 
 <h2><strong><center>Recommended Titles</center></strong></h2>
 <div class="container-fluid text-center bg-2">
-<table class="table table-condensed">
+<table id="sort" class="table table-condensed">
 <br>
 <thead>
         <tr>
@@ -97,6 +97,7 @@
     </tbody>
 </table>
 </div>
+
 <br>
 <div>
   <div class="row">
@@ -167,6 +168,13 @@
             </center><br>
         </form>
 </div>
+<!--http://tristen.ca/tablesort/demo/-->
+<script src="js/tablesort.min.js"></script>
+
+<script>
+  new Tablesort(document.getElementById('sort'));
+</script>
+<!--https://ashleydw.github.io/lightbox/-->
 <script>
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {
                 event.preventDefault();
