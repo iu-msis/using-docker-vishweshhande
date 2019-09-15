@@ -36,7 +36,7 @@
 
     <h2><center>ALL ABOUT ME</center></h2><br>
     <div id="randomUsersApp">
-    <div  v-for="user in users" class="container-fluid text-center bg-1">
+    <div v-for="user in users" class="container-fluid text-center bg-1">
       <br>
       <a v-bind:href="user.picture.large" data-toggle="lightbox" data-title="It's me" data-footer="https://randomuser.me/photos">
       <img v-bind:src="user.picture.large" alt="https://randomuser.me/photos" class="img-circle img-fluid" height=200px>
