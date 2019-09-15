@@ -35,48 +35,47 @@
     </nav>
 
     <h2><center>ALL ABOUT ME</center></h2><br>
-    <div class="container-fluid text-center bg-1">
+    <div id="randomUsersApp">
+    <div  v-for="user in users" class="container-fluid text-center bg-1">
       <br>
-      <a href="img/face2.jpg" data-toggle="lightbox" data-title="It's me" data-footer="https://randomuser.me/photos">
-      <img id="image" src="img/face2.jpg" alt="https://randomuser.me/photos" class="img-circle img-fluid" height=200px>
+      <a v-bind:href="user.picture.large" data-toggle="lightbox" data-title="It's me" data-footer="https://randomuser.me/photos">
+      <img v-bind:src="user.picture.large" alt="https://randomuser.me/photos" class="img-circle img-fluid" height=200px>
       </a>
-
-      <h3>Vishwesh H.</h3>
+      <h3>{{user.name.first}}&nbsp;{{user.name.last}}</h3>
     </div>
 
-    <div class="container-fluid text-center bg-2">
+    <div v-for="user in users" class="container-fluid text-center bg-2">
       <br>
-        <a href="img/india.jpg" data-toggle="lightbox" data-title="India" data-footer="https://imgbin.com/png/L0kMP3gA/india-globe-world-map-city-map-png">
-      <img id="image" src="img/india.jpg" alt="https://imgbin.com/png/L0kMP3gA/india-globe-world-map-city-map-png" class="img-circle" height=200px>
+
+        <h3>{{user.nat}}</h3>
       </a>
       <h3>Where did it all begin?</h3>
     </div>
 
-    <div class="container-fluid text-center bg-3">
+    <div v-for="user in users" class="container-fluid text-center bg-3">
       <br>
-      <a href="img/year.jpg" data-toggle="lightbox" data-title="Year '97'" data-footer="https://www.zedbooks.net/shop/book/1997/">
-      <img id="image" src="img/year.jpg" alt="https://www.zedbooks.net/shop/book/1997/" class="img-circle" height=190px width=200px>
-</a>
+
+      <h3>{{user.dob.date}}</h3>
 
       <h3>When did it all begin</h3>
     </div>
 
-    <div class="container-fluid text-center bg-4">
+    <div v-for="user in users" class="container-fluid text-center bg-4">
       <br>
-        <a href="img/age.jpg" data-toggle="lightbox" data-title="Car Art 22" data-footer="https://www.mrn.com/2019/01/01/joey-logano-paint-schemes-2019-nascar-cup/">
-      <img id="image" src="img/age.jpg" alt="https://www.mrn.com/2019/01/01/joey-logano-paint-schemes-2019-nascar-cup/" class="img-circle" height=170px width=190px>
-</a>
+
+      <h3>{{user.dob.age}}</h3>
       <h3>Years young</h3>
     </div>
 
-    <div class="container-fluid text-center bg-5">
+    <div v-for="user in users" class="container-fluid text-center bg-5">
       <br>
         <a href="img/mail3.png" data-toggle="lightbox" data-title="@" data-footer="https://en.wikipedia.org/wiki/Email">
       <img id="image" src="img/mail3.png" alt="https://en.wikipedia.org/wiki/Email" class="img-circle" height=180px>
 </a>
-      <h3><a href="mailto=itsme4real@gmail.com" target="_top" id="link">Email me!</a></h3>
-    </div>
 
+      <h3><a href="mailto:gail.johnston93@example.com" target="_top" id="link">{{user.email}}</a></h3>
+    </div>
+</div>
 
 <script>
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {
@@ -84,6 +83,9 @@
                 $(this).ekkoLightbox();
             });
             </script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/app.js"></script>
 
     </body>
 
