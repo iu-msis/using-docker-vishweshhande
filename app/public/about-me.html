@@ -77,6 +77,10 @@
     </div>
 </div>
 
+<form class="buttonform" v-on:submit.prevent="fetchUsers">
+      <button id="button" type="submit" class="btn btn-primary">Refresh</button>
+    </form>
+
 <script>
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {
                 event.preventDefault();
