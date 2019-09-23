@@ -75,11 +75,14 @@
 
       <h3><a href="mailto:gail.johnston93@example.com" target="_top" id="link">{{user.email}}</a></h3>
     </div>
+
+    <div>
+    <form class="buttonform" v-on:submit.prevent="submitFunction">
+          <button id="button" type="submit" class="btn btn-primary">Refresh</button>
+        </form>
+      </div>
 </div>
 
-<form class="buttonform" v-on:submit.prevent="fetchUsers">
-      <button id="button" type="submit" class="btn btn-primary">Refresh</button>
-    </form>
 
 <script>
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {

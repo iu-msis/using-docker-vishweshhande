@@ -32,7 +32,13 @@ methods: {
     fetch('https://randomuser.me/api/')
     .then(function(response) {return response.json() })
     .then(json => {randomUsers.users = json.results });
+  },
+
+  submitFunction(event){
+    this.fetchUsers();
   }
+
+
 },
 
 created(){
